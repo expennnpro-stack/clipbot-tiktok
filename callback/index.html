@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ClipBot - connecting</title><style>body{background:#06060b;color:#e8e8f2;font-family:Segoe UI,Arial,sans-serif;max-width:760px;margin:48px auto;padding:0 20px;line-height:1.6}h1{color:#ff2e97}a{color:#00d4ff}</style></head><body>
+<h1>ClipBot</h1>
+<p id="m">Sending you back to ClipBot...</p>
+<script>
+// Renvoie le code d'autorisation TikTok vers ClipBot (ouvert sur ton PC).
+var q = location.search.slice(1);
+if (q) { location.replace("http://127.0.0.1:3002/?" + q); }
+else { document.getElementById("m").textContent = "Nothing to do here. Start the connection from ClipBot."; }
+setTimeout(function(){ if (q) document.getElementById("m").textContent = "If nothing happens, make sure ClipBot is open, then try again."; }, 4000);
+</script></body></html>
